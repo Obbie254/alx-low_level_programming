@@ -4,3 +4,4 @@
 3-name  script that compiles a C file and creates an executable named cisfun.
 4-puts.c  C program that prints
 5-printf.c  A printf program.
+6-size.c  c program that shows sizes of different characters
