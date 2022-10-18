@@ -5,3 +5,4 @@
 4-puts.c  C program that prints
 5-printf.c  A printf program.
 6-size.c  c program that shows sizes of different characters
+101-quote.c  a program that is not using printf or puts fxns.
