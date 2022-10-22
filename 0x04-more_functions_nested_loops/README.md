@@ -9,3 +9,4 @@ NOTE!! example of compilation of a file (4-print_most_numbers.c) that includes a
 5-more_numbers.c  prints num 0-14
 6-print_line.c  prints a line.
 7-print_diagonal.c  prints a diagonal line.
+8-print_square.c  prints a square of size characters.
