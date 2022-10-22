@@ -7,3 +7,5 @@ NOTE!! example of compilation of a file (4-print_most_numbers.c) that includes a
 3-print_numbers.c  prints num 0-9
 4-print_most_numbers.c  prints num 0-9 except 2 n 4
 5-more_numbers.c  prints num 0-14
+6-print_line.c  prints a line.
+7-print_diagonal.c  prints a diagonal line.
