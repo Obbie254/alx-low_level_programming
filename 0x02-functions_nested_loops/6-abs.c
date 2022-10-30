@@ -5,7 +5,7 @@
  * @a: variable checked
  * Return: absolute value
  */
-int _abs(int a);
+int _abs(int a)
 {
 	if (a < 0)
 	{
