@@ -13,37 +13,25 @@ void times_table(void)
 		for (j = 0; j < 11; j++)
 		{
 			p = j * k;
+			if (j == 10)
+				_putchar('\n');
+				k++;
 			if (p >= 0 && p <= 9)
 			{
 				if (j == 0)
 					_putchar(p + '0');
-				else if (j == 10)
-				{
-					_putchar('\n');
-					k++;
-				}
 				else
-				{
 					_putchar(',');
 					_putchar(' ');
 					_putchar(' ');
 					_putchar(p + '0');
-				}
 			}
 			else if (p >= 10)
 			{
-				if (j == 10)
-				{
-					_putchar('\n');
-					k++;
-				}
-				else
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar((p / 10) + '0');
-					_putchar((p % 10) + '0');
-				}
+				_putchar(',');
+				_putchar(' ');
+				_putchar((p / 10) + '0');
+				_putchar((p % 10) + '0');
 			}
 
 		}
