@@ -8,10 +8,10 @@
  *
  * Return: void
  */
-
 void print_line(char *c, int s, int l)
 {
 	int j, k;
+
 	for (j = 0; j <= 9; j++)
 	{
 		if (j <= s)
@@ -29,7 +29,6 @@ void print_line(char *c, int s, int l)
 			putchar('.');
 	}
 }
-
 /**
  * print_buffer - prints a buffer
  * @b: buffer to print
