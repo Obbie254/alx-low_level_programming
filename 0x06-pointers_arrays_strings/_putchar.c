@@ -1,12 +1,17 @@
-#include <unistd.h>
+#include "main.h"
 
 /**
- * _putchar - wirtes the character c to stdout.
- * @c: char to be printed
- * Return: 1 on success
+ * _memset - Entry point
+ * @s: pointed destination
+ * @b: constant byte
+ * @n: bytes
+ * Return: Always 0 (Success)
  */
-
-int _putchar(char c)
+char *_memset(char *s, char b, unsigned int n)
 {
-	return (write(1, &c, 1));
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+		s[i] = b;
+	return (s);
 }
