@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- *
- *
+ * prm2 - fxn allow iteration from 2 to n
+ * @a: same number as n
+ * @b: increasing diviser
+ * return: prime number
  */
 int prm2(int a, int b)
 {
@@ -10,7 +12,7 @@ int prm2(int a, int b)
 		return (1);
 	else if (a % b == 0)
 		return (0);
-	return (prm2(a, b+1));
+	return (prm2(a, b + 1));
 }
 
 /**
@@ -22,5 +24,5 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 		return (0);
-	return (prm2(a, b));
+	return (prm2(n, 2));
 }
