@@ -4,7 +4,9 @@
  * prm2 - fxn allow iteration from 2 to n
  * @a: same number as n
  * @b: increasing diviser
- * return: prime number
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int prm2(int a, int b)
 {
@@ -18,7 +20,9 @@ int prm2(int a, int b)
 /**
  * is_prime_number - fxn checks for prime number
  * @n: number to be checked
- * return: 1 for a prime number and 0 for fail
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int is_prime_number(int n)
 {
