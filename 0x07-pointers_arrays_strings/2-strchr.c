@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "main.h"
 /**
  * _strchr - prints from the first occurence of a char
@@ -7,15 +8,14 @@
  */
 char *_strchr(char *s, char c)
 {
+	char *t = NULL;
+
 	while (*s != '\0')
 	{
 		if (*s == c)
-			return (s);
-		else
-			s++;
+			*t = c;
 	}
 	if (*s == c)
-		return (s);
-	else
-		return (0);
+		*t = c;
+	return (t);
 }
