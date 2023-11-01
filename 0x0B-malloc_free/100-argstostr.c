@@ -5,7 +5,7 @@
 * *argstostr - the fxn concatenates all the arguments
 * @ac : arg of counter
 ;* @av : arg of vector
-* Return: pointer
+* Return: pointer to new str, NULL (Error)
 */
 
 char *argstostr(int ac, char **av)
@@ -27,7 +27,7 @@ char *argstostr(int ac, char **av)
 		str++;
 	}
 
-	d = malloc(sizeof(char) * str);
+	d = malloc(sizeof(char) * (str + 1));
 
 	if (d == NULL)
 		return (NULL);
