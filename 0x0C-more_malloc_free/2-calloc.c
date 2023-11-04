@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
 * _calloc - prints calloc;
-* @nmemb: input string.
-* @size: input string.
+* @nmemb: no. array elements.
+* @size: size of array type.
 * Return: Pointer.
 */
 void *_calloc(unsigned int nmemb, unsigned int size)

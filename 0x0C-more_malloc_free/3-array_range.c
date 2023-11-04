@@ -1,31 +1,24 @@
-#include "holberton.h"
-#include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
+
 /**
- * array_range - array of integers.
- * @min: input min.
- * @max: input max.
- *
- * Return: array.
+ * array_range - fxn that creates an array of integers
+ * @min: lowest int
+ * @max: highest int
+ * Return: pointer to the newly created array
  */
 int *array_range(int min, int max)
 {
-	int *a;
-	int i, full;
+	unsigned int i, len;
+	int *p;
 
-	full = (max - min) + 1;
+	len = (max - min) + 1;
 	if (min > max)
-	{
 		return (NULL);
-	}
-	a = malloc(sizeof(int) * full);
-	if (a == NULL)
-	{
+	p = malloc(len * sizeof(int));
+	if (p == NULL)
 		return (NULL);
-	}
 	for (i = 0; min <= max; i++)
-	{
-		a[i] = min++;
-	}
-	return (a);
+		p[i] = min++;
+	return (p);
 }
