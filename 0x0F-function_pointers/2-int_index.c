@@ -3,9 +3,9 @@
 
 /**
  * int_index - fxn that searches for an integer
- * array: array to into
- * size: len of array
- * cmp: fxn used to compare values
+ * @array: array to into
+ * @size: len of array
+ * @cmp: fxn used to compare values
  *
  * Return: index of first element for which cmp fxn does not return 0
  */
