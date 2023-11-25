@@ -11,6 +11,6 @@ int get_endianness(void)
 	unsigned int x = 1;
 	char *c;
 
-	c = (char *) &i; /* points to the first byte of the integer x */
+	c = (char *) &x; /* points to the first byte of the integer x */
 	return (*c);
 }
