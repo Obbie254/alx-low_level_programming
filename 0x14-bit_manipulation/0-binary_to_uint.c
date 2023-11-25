@@ -1,22 +1,4 @@
 #include "main.h"
-
-/**
- * _strlen - returns the length of a string
- * @s: string
- * Return: length
- */
-
-int _strlen(char *s)
-{
-	int len = 0;
-
-	while (*s != '\0')
-	{
-		len++;
-		s++;
-	}
-	return (len);
-}
 /**
  * binary_to_uint - fxn that converts a binary num to unsigned int
  * @b: string of 0 and 1 chars
@@ -25,13 +7,18 @@ int _strlen(char *s)
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int x;
 	int i;
+	unsigned int dec_val = 0;
 
-	if (b != 0 || b != 1 || b == NULL)
+	if (!b)
 		return (0);
-	for (i = 0; b != '\0'; i++)
+
+	for (i = 0; b[i]; i++)
 	{
-		x = x + (b[i] * (2 ** (_strlen(b) - i)));
+		if (b[i] < '0' || b[i] > '1')
+			return (0);
+		dec_val = 2 * dec_val + (b[i] - '0');
 	}
-	return (x);
+
+	return (dec_val);
+}
