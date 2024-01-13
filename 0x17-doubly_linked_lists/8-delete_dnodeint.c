@@ -1,0 +1,42 @@
+#include "lists.h"
+
+/**
+ * delete_dnodeint_at_index- fxn that deletes a node at given index
+ * @head: pointer to the list
+ * @index: index of the node to delete
+ * Return: 1 if it succeeded, -1 if it failed
+*/
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+{
+	dlistint_t *tmp;
+	dlistint_t *tmp2;
+	unsigned int i = 0;
+
+	if (head == NULL || *head == NULL)
+		return (-1);
+	if (index == 0)
+	{
+		tmp = *head;
+		*head = (*head)->next;
+		if (*head != NULL)
+			(*head)->prev = NULL;
+		free(tmp);
+		return (1);
+	}
+	tmp = *head;
+	while (tmp != NULL)
+	{
+		if (i == index - 1)
+		{
+			tmp2 = tmp->next;
+			tmp->next = tmp->next->next;
+			if (tmp->next != NULL)
+				tmp->next->prev = tmp;
+			free(tmp2);
+			return (1);
+		}
+		tmp = tmp->next;
+		i++;
+	}
+	return (-1);
+}
