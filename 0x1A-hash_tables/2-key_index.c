@@ -5,7 +5,6 @@
  *              value pair in a hash table
  * @key: key to be hashed
  * @size: size of the array
- * 
  * Return: index of the key
  */
 
