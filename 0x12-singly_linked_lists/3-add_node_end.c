@@ -1,17 +1,16 @@
 #include "lists.h"
 
 /**
- * add_node_end - fxn that adds a new node at the of a list
- * @head: head pointer
- * @str: str of node to added
+ * add_node_end - adds a new node at the end of a linked list
+ * @head: double pointer to the list_t list
+ * @str: string to put in the new node
  *
- * Return: address of the new node, Null on fail
+ * Return: address of the new element, or NULL if it failed
  */
-
-list_t *add_node_end(list_t **head, const char *str);
-
+list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new, *ptr;
+	list_t *new;
+	list_t *temp = *head;
 	unsigned int len = 0;
 
 	while (str[len])
@@ -25,11 +24,16 @@ list_t *add_node_end(list_t **head, const char *str);
 	new->len = len;
 	new->next = NULL;
 
-	ptr = head;
-	while (ptr->next)
-		ptr = ptr->next;
-	ptr->next = new;
-	ptr = new;
+	if (*head == NULL)
+	{
+		*head = new;
+		return (new);
+	}
 
-	return (ptr);
+	while (temp->next)
+		temp = temp->next;
+
+	temp->next = new;
+
+	return (new);
 }
