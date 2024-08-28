@@ -1,21 +1,18 @@
-#include <stddef.h>
 #include "main.h"
 /**
- * _strchr - prints from the first occurence of a char
- * @s: source string
- * @c: test char
- * Return: new string
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
 char *_strchr(char *s, char c)
 {
-	char *t = NULL;
+	int i = 0;
 
-	while (*s != '\0')
+	for (; s[i] >= '\0'; i++)
 	{
-		if (*s == c)
-			*t = c;
+		if (s[i] == c)
+			return (&s[i]);
 	}
-	if (*s == c)
-		*t = c;
-	return (t);
+	return (0);
 }
