@@ -1,37 +1,27 @@
-#include "main.h"
+/*
+ * File: 101-natural.c
+ * Auth: Obadiah Njihia
+ */
+
+#include <stdio.h>
 
 /**
- * sum_natural_multi - prints sum of the multiples of 3 and 5
+ * main - Lists all the natural numbers below 1024 (excluded)
+ *        that are multiples of 3 or 5.
  *
- * Return: nothing
+ * Return: Always 0.
  */
-void sum_natural_multi(void)
+int main(void)
 {
-	int sum = 0, n;
+	int i, sum = 0;
 
-	for (n = 0; n < 1024; n++)
+	for (i = 0; i < 1024; i++)
 	{
-		if (n % 3 == 0 || n % 5 == 0)
-			sum = sum + n;
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
 	}
-	if (sum >= 1000)
-	{
-		_putchar((sum / 1000) + '0');
-		_putchar(((sum % 1000) / 100) + '0');
-		_putchar((((sum % 1000) % 100) / 10) + '0');
-		_putchar((((sum % 1000) % 100) % 10) + '0');
-	}
-	else if (sum >= 100 && sum < 1000)
-	{
-		_putchar((sum / 100) + '0');
-		_putchar(((sum % 100) / 10) + '0');
-		_putchar(((sum % 100) % 10) + '0');
-	}
-	else if (sum >= 10 && sum < 100)
-	{
-		_putchar((sum / 10) + '0');
-		_putchar((sum % 10) + '0');
-	}
-	else
-		_putchar(sum + '0');
+
+	printf("%d\n", sum);
+
+	return (0);
 }
